@@ -51,6 +51,10 @@ class CoursesController < ApplicationController
     end
   end
 
+  def search
+
+  end
+
   # DELETE /courses/1
   # DELETE /courses/1.json
   def destroy
@@ -60,6 +64,7 @@ class CoursesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
