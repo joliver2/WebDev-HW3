@@ -1332,3 +1332,616 @@ Processing by SectionsController#index as HTML
 Completed 200 OK in 58ms (Views: 54.8ms | ActiveRecord: 2.3ms | Allocations: 17705)
 
 
+Started GET "/dogs" for 127.0.0.1 at 2020-10-06 15:12:04 -0600
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/dogs"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-10-06 15:12:22 -0600
+Processing by SectionsController#index as HTML
+  Rendering sections/index.html.erb within layouts/application
+  [1m[36mSection Load (1.8ms)[0m  [1m[34mSELECT "sections".* FROM "sections"[0m
+  ↳ app/views/sections/index.html.erb:17
+  Rendered sections/index.html.erb within layouts/application (Duration: 21.6ms | Allocations: 7839)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 2.6ms | Allocations: 12221)
+
+
+  
+ActionView::Template::Error (The provided regular expression is using multiline anchors (^ or $), which may present a security risk. Did you mean to use \A and \z, or forgot to add the :multiline => true option?):
+    16:   <tbody>
+    17:     <% @sections.each do |section| %>
+    18:       <tr>
+    19:         <td><%= section.course.number %></td>
+    20:         <td><%= section.professor.name %></td>
+    21:         <td><%= section.year %></td>
+    22:         <td><%= section.semester.semester%></td>
+  
+app/models/course.rb:4:in `<class:Course>'
+app/models/course.rb:1:in `<main>'
+app/views/sections/index.html.erb:19
+app/views/sections/index.html.erb:17
+Started GET "/" for 127.0.0.1 at 2020-10-06 15:16:45 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SectionsController#index as HTML
+  Rendering sections/index.html.erb within layouts/application
+  [1m[36mSection Load (0.7ms)[0m  [1m[34mSELECT "sections".* FROM "sections"[0m
+  ↳ app/views/sections/index.html.erb:17
+  Rendered sections/index.html.erb within layouts/application (Duration: 17.1ms | Allocations: 6459)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.3ms | Allocations: 9255)
+
+
+  
+ActionView::Template::Error (Either :with or :without must be supplied (but not both)):
+    16:   <tbody>
+    17:     <% @sections.each do |section| %>
+    18:       <tr>
+    19:         <td><%= section.course.number %></td>
+    20:         <td><%= section.professor.name %></td>
+    21:         <td><%= section.year %></td>
+    22:         <td><%= section.semester.semester%></td>
+  
+app/models/course.rb:4:in `<class:Course>'
+app/models/course.rb:1:in `<main>'
+app/views/sections/index.html.erb:19
+app/views/sections/index.html.erb:17
+Started GET "/" for 127.0.0.1 at 2020-10-06 15:17:09 -0600
+Processing by SectionsController#index as HTML
+  Rendering sections/index.html.erb within layouts/application
+  [1m[36mSection Load (0.2ms)[0m  [1m[34mSELECT "sections".* FROM "sections"[0m
+  ↳ app/views/sections/index.html.erb:17
+  Rendered sections/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2226)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 2568)
+
+
+  
+ActionView::Template::Error (Either :with or :without must be supplied (but not both)):
+    16:   <tbody>
+    17:     <% @sections.each do |section| %>
+    18:       <tr>
+    19:         <td><%= section.course.number %></td>
+    20:         <td><%= section.professor.name %></td>
+    21:         <td><%= section.year %></td>
+    22:         <td><%= section.semester.semester%></td>
+  
+app/models/course.rb:4:in `<class:Course>'
+app/models/course.rb:1:in `<main>'
+app/views/sections/index.html.erb:19
+app/views/sections/index.html.erb:17
+Started GET "/" for 127.0.0.1 at 2020-10-06 15:18:55 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by SectionsController#index as HTML
+  Rendering sections/index.html.erb within layouts/application
+  [1m[36mSection Load (0.9ms)[0m  [1m[34mSELECT "sections".* FROM "sections"[0m
+  ↳ app/views/sections/index.html.erb:17
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sections/index.html.erb:19
+  [1m[36mProfessor Load (0.5ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sections/index.html.erb:20
+  [1m[36mSemester Load (0.5ms)[0m  [1m[34mSELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sections/index.html.erb:22
+  Rendered sections/index.html.erb within layouts/application (Duration: 47.1ms | Allocations: 20128)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 92ms (Views: 81.3ms | ActiveRecord: 5.1ms | Allocations: 30438)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-06 15:19:01 -0600
+Processing by SectionsController#index as HTML
+  Rendering sections/index.html.erb within layouts/application
+  [1m[36mSection Load (0.1ms)[0m  [1m[34mSELECT "sections".* FROM "sections"[0m
+  ↳ app/views/sections/index.html.erb:17
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sections/index.html.erb:19
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sections/index.html.erb:20
+  [1m[36mSemester Load (0.1ms)[0m  [1m[34mSELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sections/index.html.erb:22
+  Rendered sections/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2949)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.5ms | Allocations: 7095)
+
+
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 15:19:02 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.5ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.5ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 15.9ms | Allocations: 6246)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 22.1ms | ActiveRecord: 1.7ms | Allocations: 10911)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2020-10-06 15:19:04 -0600
+Processing by CoursesController#new as HTML
+  Rendering courses/new.html.erb within layouts/application
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/views/courses/_form.html.erb:16
+  Rendered courses/_form.html.erb (Duration: 17.5ms | Allocations: 3588)
+  Rendered courses/new.html.erb within layouts/application (Duration: 24.4ms | Allocations: 3917)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.4ms | Allocations: 8194)
+
+
+Started POST "/courses" for 127.0.0.1 at 2020-10-06 15:19:18 -0600
+Processing by CoursesController#create as HTML
+  Parameters: {"authenticity_token"=>"Gsw8hJkHIgfWzIFnJUPijHP5bD8MuN8+8d1QRdNvOqWbtWhnIuoY0VbMUNN2PZWK/7n/FO+zh5tz/M+laRI8jw==", "course"=>{"department_id"=>"2", "number"=>"", "hours"=>"4"}, "commit"=>"Create Course"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/courses_controller.rb:30:in `block in create'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:30:in `block in create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/courses_controller.rb:30:in `block in create'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms | Allocations: 6585)
+
+
+  
+NoMethodError (undefined method `course' for #<Course:0x00007fb981d41448>):
+  
+app/controllers/courses_controller.rb:30:in `block in create'
+app/controllers/courses_controller.rb:29:in `create'
+Started GET "/courses/new" for 127.0.0.1 at 2020-10-06 15:19:34 -0600
+Processing by CoursesController#new as HTML
+  Rendering courses/new.html.erb within layouts/application
+  [1m[36mDepartment Load (2.6ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/views/courses/_form.html.erb:16
+  Rendered courses/_form.html.erb (Duration: 7.9ms | Allocations: 1651)
+  Rendered courses/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1733)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 18.2ms | ActiveRecord: 2.6ms | Allocations: 5889)
+
+
+Started POST "/courses" for 127.0.0.1 at 2020-10-06 15:20:14 -0600
+Processing by CoursesController#create as HTML
+  Parameters: {"authenticity_token"=>"kqg7uOm0096DupgLGA4upymVnVB6XMgw8IjIifFLl5oT0W9bUlnpCAO6Sb9LcFmhpdUOe5lXkJVyqVdpSzaRsA==", "course"=>{"department_id"=>"1", "number"=>"3200", "hours"=>"4"}, "commit"=>"Create Course"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/courses_controller.rb:30:in `block in create'
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:30:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/courses_controller.rb:30:in `block in create'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms | Allocations: 6334)
+
+
+  
+NoMethodError (undefined method `course' for #<Course:0x00007fb981f14310>):
+  
+app/controllers/courses_controller.rb:30:in `block in create'
+app/controllers/courses_controller.rb:29:in `create'
+Started POST "/courses" for 127.0.0.1 at 2020-10-06 15:21:35 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CoursesController#create as HTML
+  Parameters: {"authenticity_token"=>"Gsw8hJkHIgfWzIFnJUPijHP5bD8MuN8+8d1QRdNvOqWbtWhnIuoY0VbMUNN2PZWK/7n/FO+zh5tz/M+laRI8jw==", "course"=>{"department_id"=>"1", "number"=>"", "hours"=>"4"}, "commit"=>"Create Course"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/courses_controller.rb:30:in `block in create'
+  [1m[36mDepartment Load (0.7ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:30:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/courses_controller.rb:30:in `block in create'
+  Rendering courses/new.html.erb within layouts/application
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/views/courses/_form.html.erb:16
+  Rendered courses/_form.html.erb (Duration: 3.7ms | Allocations: 1842)
+  Rendered courses/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1925)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 18.4ms | ActiveRecord: 2.0ms | Allocations: 17878)
+
+
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 15:21:47 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (1.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2374)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 1.4ms | Allocations: 6533)
+
+
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 15:22:15 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2340)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.4ms | Allocations: 6465)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-06 15:22:17 -0600
+Processing by SectionsController#index as HTML
+  Rendering sections/index.html.erb within layouts/application
+  [1m[36mSection Load (0.7ms)[0m  [1m[34mSELECT "sections".* FROM "sections"[0m
+  ↳ app/views/sections/index.html.erb:17
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sections/index.html.erb:19
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sections/index.html.erb:20
+  [1m[36mSemester Load (0.4ms)[0m  [1m[34mSELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sections/index.html.erb:22
+  Rendered sections/index.html.erb within layouts/application (Duration: 31.5ms | Allocations: 14732)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 38.1ms | ActiveRecord: 3.9ms | Allocations: 21086)
+
+
+Started GET "/dogs" for 127.0.0.1 at 2020-10-06 15:22:17 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/dogs"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/departments" for 127.0.0.1 at 2020-10-06 15:22:20 -0600
+Processing by DepartmentsController#index as HTML
+  Rendering departments/index.html.erb within layouts/application
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/views/departments/index.html.erb:14
+  Rendered departments/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1289)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 6073)
+
+
+Started GET "/departments/new" for 127.0.0.1 at 2020-10-06 15:22:24 -0600
+Processing by DepartmentsController#new as HTML
+  Rendering departments/new.html.erb within layouts/application
+  Rendered departments/_form.html.erb (Duration: 4.4ms | Allocations: 838)
+  Rendered departments/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1161)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 5421)
+
+
+Started GET "/departments" for 127.0.0.1 at 2020-10-06 15:22:27 -0600
+Processing by DepartmentsController#index as HTML
+  Rendering departments/index.html.erb within layouts/application
+  [1m[36mDepartment Load (5.6ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/views/departments/index.html.erb:14
+  Rendered departments/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 1006)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 25.6ms | ActiveRecord: 5.6ms | Allocations: 5134)
+
+
+Started GET "/departments/new" for 127.0.0.1 at 2020-10-06 15:22:33 -0600
+Processing by DepartmentsController#new as HTML
+  Rendering departments/new.html.erb within layouts/application
+  Rendered departments/_form.html.erb (Duration: 5.8ms | Allocations: 503)
+  Rendered departments/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 585)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.0ms | Allocations: 4723)
+
+
+Started GET "/departments/new" for 127.0.0.1 at 2020-10-06 15:23:03 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DepartmentsController#new as HTML
+  Rendering departments/new.html.erb within layouts/application
+  Rendered departments/_form.html.erb (Duration: 1.4ms | Allocations: 564)
+  Rendered departments/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 647)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 15.7ms | ActiveRecord: 0.7ms | Allocations: 8157)
+
+
+Started POST "/departments" for 127.0.0.1 at 2020-10-06 15:23:05 -0600
+Processing by DepartmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"g5rSmg56irhlqwzJdC6PGnjGQie7vv7CIrxbiQHr/2j7hkP0enLmSD+otB031o8JCvBPDwMJoGWe77JYcdssRw==", "department"=>{"name"=>""}, "commit"=>"Create Department"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 3624)
+
+
+  
+NoMethodError (undefined method `department' for #<Department id: nil, name: "", created_at: nil, updated_at: nil>):
+  
+app/controllers/departments_controller.rb:30:in `block in create'
+app/controllers/departments_controller.rb:29:in `create'
+Started GET "/departments/new" for 127.0.0.1 at 2020-10-06 15:23:09 -0600
+Processing by DepartmentsController#new as HTML
+  Rendering departments/new.html.erb within layouts/application
+  Rendered departments/_form.html.erb (Duration: 0.9ms | Allocations: 503)
+  Rendered departments/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 585)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 4741)
+
+
+Started POST "/departments" for 127.0.0.1 at 2020-10-06 15:23:20 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DepartmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"pMqmz7vHyEPxHBZw0kxxGZA8ymJmUh2dZew5yV+r+0MD11q9JSMcKQanceziOw/MiCc1sDca2vOu+w3uqUc1hg==", "department"=>{"name"=>""}, "commit"=>"Create Department"}
+  Rendering departments/new.html.erb within layouts/application
+  Rendered departments/_form.html.erb (Duration: 2.6ms | Allocations: 655)
+  Rendered departments/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 738)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 13.8ms | ActiveRecord: 1.1ms | Allocations: 9287)
+
+
+Started GET "/departments" for 127.0.0.1 at 2020-10-06 15:24:16 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DepartmentsController#index as HTML
+  Rendering departments/index.html.erb within layouts/application
+  [1m[36mDepartment Load (0.7ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/views/departments/index.html.erb:14
+  Rendered departments/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3436)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 19.2ms | ActiveRecord: 1.2ms | Allocations: 8566)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-06 15:24:17 -0600
+Processing by SectionsController#index as HTML
+  Rendering sections/index.html.erb within layouts/application
+  [1m[36mSection Load (0.5ms)[0m  [1m[34mSELECT "sections".* FROM "sections"[0m
+  ↳ app/views/sections/index.html.erb:17
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sections/index.html.erb:19
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sections/index.html.erb:20
+  [1m[36mSemester Load (0.4ms)[0m  [1m[34mSELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sections/index.html.erb:22
+  Rendered sections/index.html.erb within layouts/application (Duration: 46.2ms | Allocations: 19065)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 48.1ms | ActiveRecord: 4.2ms | Allocations: 25439)
+
+
+Started GET "/professors" for 127.0.0.1 at 2020-10-06 15:24:19 -0600
+Processing by ProfessorsController#index as HTML
+  Rendering professors/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  ↳ app/views/professors/index.html.erb:15
+  Rendered professors/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1211)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.2ms | Allocations: 5998)
+
+
+Started GET "/professors/new" for 127.0.0.1 at 2020-10-06 15:24:20 -0600
+Processing by ProfessorsController#new as HTML
+  Rendering professors/new.html.erb within layouts/application
+  Rendered professors/_form.html.erb (Duration: 10.1ms | Allocations: 1069)
+  Rendered professors/new.html.erb within layouts/application (Duration: 13.4ms | Allocations: 1392)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.0ms | Allocations: 5665)
+
+
+Started POST "/professors" for 127.0.0.1 at 2020-10-06 15:24:21 -0600
+Processing by ProfessorsController#create as HTML
+  Parameters: {"authenticity_token"=>"1Qxl9cQDD4eLotgUFTu2AsgIYTB9LenEkSGTYcq9DOvwhpgYoHCWd0FUVaRZ8WNy0QfL2EhJQ05UoG4ioE/gew==", "professor"=>{"name"=>"", "office"=>""}, "commit"=>"Create Professor"}
+  Rendering professors/new.html.erb within layouts/application
+  Rendered professors/_form.html.erb (Duration: 1.4ms | Allocations: 970)
+  Rendered professors/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1052)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 6464)
+
+
+Started GET "/professors" for 127.0.0.1 at 2020-10-06 15:27:48 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProfessorsController#index as HTML
+  Rendering professors/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.8ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  ↳ app/views/professors/index.html.erb:15
+  Rendered professors/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 3875)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 21.9ms | ActiveRecord: 1.7ms | Allocations: 9063)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-06 15:27:49 -0600
+Processing by SectionsController#index as HTML
+  Rendering sections/index.html.erb within layouts/application
+  [1m[36mSection Load (0.6ms)[0m  [1m[34mSELECT "sections".* FROM "sections"[0m
+  ↳ app/views/sections/index.html.erb:17
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sections/index.html.erb:19
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sections/index.html.erb:20
+  [1m[36mSemester Load (0.6ms)[0m  [1m[34mSELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sections/index.html.erb:22
+  Rendered sections/index.html.erb within layouts/application (Duration: 41.8ms | Allocations: 15721)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 58ms (Views: 43.9ms | ActiveRecord: 4.5ms | Allocations: 22379)
+
+
+Started GET "/sections" for 127.0.0.1 at 2020-10-06 15:27:50 -0600
+Processing by SectionsController#index as HTML
+  Rendering sections/index.html.erb within layouts/application
+  [1m[36mSection Load (0.1ms)[0m  [1m[34mSELECT "sections".* FROM "sections"[0m
+  ↳ app/views/sections/index.html.erb:17
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sections/index.html.erb:19
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sections/index.html.erb:20
+  [1m[36mSemester Load (0.1ms)[0m  [1m[34mSELECT "semesters".* FROM "semesters" WHERE "semesters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/sections/index.html.erb:22
+  Rendered sections/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2937)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.4ms | Allocations: 7076)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2020-10-06 15:27:50 -0600
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  [1m[36mSection Load (0.2ms)[0m  [1m[34mSELECT "sections".* FROM "sections"[0m
+  ↳ app/views/students/_form.html.erb:26
+  Rendered students/_form.html.erb (Duration: 21.8ms | Allocations: 6891)
+  Rendered students/new.html.erb within layouts/application (Duration: 25.5ms | Allocations: 7218)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 37.2ms | ActiveRecord: 1.1ms | Allocations: 16302)
+
+
+Started GET "/student" for 127.0.0.1 at 2020-10-06 15:27:51 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/student"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/students" for 127.0.0.1 at 2020-10-06 15:27:51 -0600
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:15
+  Rendered students/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1161)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.5ms | Allocations: 5477)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2020-10-06 15:27:53 -0600
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  [1m[36mSection Load (0.3ms)[0m  [1m[34mSELECT "sections".* FROM "sections"[0m
+  ↳ app/views/students/_form.html.erb:26
+  Rendered students/_form.html.erb (Duration: 10.3ms | Allocations: 1930)
+  Rendered students/new.html.erb within layouts/application (Duration: 11.0ms | Allocations: 2012)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.3ms | Allocations: 6166)
+
+
+Started POST "/students" for 127.0.0.1 at 2020-10-06 15:27:53 -0600
+Processing by StudentsController#create as HTML
+  Parameters: {"authenticity_token"=>"XInnmzigTJxLgrAQB0T6W+NYBruCqtCBRxkiAaC8cIiZoYIYTiBx5U2Jp8cOP1sW6w8h9Fne8O4sbr3zEiqPVQ==", "student"=>{"name"=>"", "identifier"=>"", "section_ids"=>[""]}, "commit"=>"Create Student"}
+  [1m[36mSection Load (0.3ms)[0m  [1m[34mSELECT "sections".* FROM "sections" WHERE 1=0[0m
+  ↳ app/controllers/students_controller.rb:29:in `create'
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/_form.html.erb (Duration: 2.5ms | Allocations: 2534)
+  Rendered students/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2597)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms | Allocations: 5638)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    23: 
+    24:   <div class="field">
+    25:     <%= form.label :section_id %><br>
+    26:     <%= form.collection_check_boxes(:section_ids, @sections, :id, :id) %>
+    27:   </div>
+    28: 
+    29:   <div class="actions">
+  
+app/views/students/_form.html.erb:26
+app/views/students/_form.html.erb:1
+app/views/students/new.html.erb:3
+app/controllers/students_controller.rb:36:in `block (2 levels) in create'
+app/controllers/students_controller.rb:31:in `create'
+Started GET "/students/new" for 127.0.0.1 at 2020-10-06 15:28:05 -0600
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  [1m[36mSection Load (0.8ms)[0m  [1m[34mSELECT "sections".* FROM "sections"[0m
+  ↳ app/views/students/_form.html.erb:26
+  Rendered students/_form.html.erb (Duration: 4.9ms | Allocations: 1930)
+  Rendered students/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2012)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.8ms | Allocations: 6179)
+
+
+Started POST "/students" for 127.0.0.1 at 2020-10-06 15:28:13 -0600
+Processing by StudentsController#create as HTML
+  Parameters: {"authenticity_token"=>"UJsAXaIj5IuoG4/6IneKig77IJZOghZzEejQbfn3QlqVs2Xe1KPZ8q4QmC0rDCvHBqwH2ZX2Nhx6n0+fS2G9hw==", "student"=>{"name"=>"", "identifier"=>"", "section_ids"=>[""]}, "commit"=>"Create Student"}
+  [1m[36mSection Load (0.2ms)[0m  [1m[34mSELECT "sections".* FROM "sections" WHERE 1=0[0m
+  ↳ app/controllers/students_controller.rb:29:in `create'
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/_form.html.erb (Duration: 2.3ms | Allocations: 2530)
+  Rendered students/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2593)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms | Allocations: 5419)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    23: 
+    24:   <div class="field">
+    25:     <%= form.label :section_id %><br>
+    26:     <%= form.collection_check_boxes(:section_ids, @sections, :id, :id) %>
+    27:   </div>
+    28: 
+    29:   <div class="actions">
+  
+app/views/students/_form.html.erb:26
+app/views/students/_form.html.erb:1
+app/views/students/new.html.erb:3
+app/controllers/students_controller.rb:36:in `block (2 levels) in create'
+app/controllers/students_controller.rb:31:in `create'
