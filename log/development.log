@@ -3233,3 +3233,966 @@ Processing by CoursesController#index as HTML
 Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 2.0ms | Allocations: 11046)
 
 
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 17:22:28 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.5ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 20.6ms | Allocations: 9014)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 42.9ms | ActiveRecord: 1.3ms | Allocations: 15376)
+
+
+Started GET "/search?search=CS" for 127.0.0.1 at 2020-10-06 17:22:32 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"CS"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2539)
+
+
+  
+NameError (uninitialized constant CoursesController::Courses):
+  
+app/controllers/courses_controller.rb:59:in `search'
+Started GET "/search?search=CS" for 127.0.0.1 at 2020-10-06 17:26:59 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"CS"}
+Completed 500 Internal Server Error in 206ms (ActiveRecord: 0.0ms | Allocations: 84542)
+
+
+  
+NameError (undefined local variable or method `parameter' for #<CoursesController:0x00007fb98792d978>
+Did you mean?  @parameter):
+  
+app/controllers/courses_controller.rb:58:in `search'
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 17:27:02 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.5ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 33.3ms | Allocations: 9434)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 44.5ms | ActiveRecord: 3.3ms | Allocations: 13772)
+
+
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 17:27:05 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2340)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.3ms | Allocations: 6604)
+
+
+Started GET "/search?search=CS" for 127.0.0.1 at 2020-10-06 17:27:09 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"CS"}
+Completed 500 Internal Server Error in 130ms (ActiveRecord: 0.0ms | Allocations: 83419)
+
+
+  
+NameError (undefined local variable or method `parameter' for #<CoursesController:0x00007fb987b2e740>
+Did you mean?  @parameter):
+  
+app/controllers/courses_controller.rb:58:in `search'
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 17:28:14 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 38.8ms | Allocations: 9386)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 57.9ms | ActiveRecord: 2.5ms | Allocations: 14888)
+
+
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 17:28:16 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2340)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.6ms | Allocations: 6594)
+
+
+Started GET "/search?search=CS" for 127.0.0.1 at 2020-10-06 17:28:18 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"CS"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (1.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(name) LIKE '%cs%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  Rendered courses/search.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2156)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.5ms | Allocations: 2777)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: name):
+    1: <h3>Search Results</h3>
+    2: 
+    3:   <% @results.each do |result| %>
+    4:     <%= result.name %><br>
+    5: <% end %>
+  
+app/views/courses/search.html.erb:3
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 17:29:37 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 23.4ms | Allocations: 2348)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 54.8ms | ActiveRecord: 1.5ms | Allocations: 6633)
+
+
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 17:29:39 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2340)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.5ms | Allocations: 6596)
+
+
+Started GET "/search?search=1010" for 127.0.0.1 at 2020-10-06 17:29:41 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"1010"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (1.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(name) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  Rendered courses/search.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2023)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.3ms | Allocations: 2492)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: name):
+    1: <h3>Search Results</h3>
+    2: 
+    3:   <% @results.each do |result| %>
+    4:     <%= result.name %><br>
+    5: <% end %>
+  
+app/views/courses/search.html.erb:3
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 17:32:41 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2601)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 34.0ms | ActiveRecord: 0.4ms | Allocations: 7874)
+
+
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 17:32:43 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2345)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.4ms | Allocations: 6602)
+
+
+Started GET "/search?search=" for 127.0.0.1 at 2020-10-06 17:32:44 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>""}
+Redirected to http://localhost:3000/courses
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 294)
+
+
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 17:32:44 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2340)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.3ms | Allocations: 6588)
+
+
+Started GET "/search?search=1010" for 127.0.0.1 at 2020-10-06 17:32:49 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"1010"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (1.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(name) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  Rendered courses/search.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2152)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.2ms | Allocations: 2761)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: name):
+    1: <h3>Search Results</h3>
+    2: 
+    3:   <% @results.each do |result| %>
+    4:     <%= result.name %><br>
+    5:   <% end %>
+  
+app/views/courses/search.html.erb:3
+Started GET "/search?search=1010" for 127.0.0.1 at 2020-10-06 17:35:06 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"1010"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(name) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  Rendered courses/search.html.erb within layouts/application (Duration: 1.8ms | Allocations: 2022)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.6ms | Allocations: 2496)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: name):
+    1: <h3>Search Results</h3>
+    2: 
+    3:   <% @results.each do |result| %>
+    4:     <%= result.name %><br>
+    5:   <% end %>
+  
+app/views/courses/search.html.erb:3
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 17:35:08 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 18.1ms | Allocations: 2348)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.7ms | Allocations: 6624)
+
+
+Started GET "/search?search=Math" for 127.0.0.1 at 2020-10-06 17:35:17 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"Math"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(name) LIKE '%math%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  Rendered courses/search.html.erb within layouts/application (Duration: 1.7ms | Allocations: 2023)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.7ms | Allocations: 2494)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: name):
+    1: <h3>Search Results</h3>
+    2: 
+    3:   <% @results.each do |result| %>
+    4:     <%= result.name %><br>
+    5:   <% end %>
+  
+app/views/courses/search.html.erb:3
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 17:39:09 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2339)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.4ms | Allocations: 6609)
+
+
+Started GET "/search?search=CS" for 127.0.0.1 at 2020-10-06 17:39:14 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"CS"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(name) LIKE '%cs%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  Rendered courses/search.html.erb within layouts/application (Duration: 1.3ms | Allocations: 2022)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.5ms | Allocations: 2501)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: name):
+    1: <h3>Search Results</h3>
+    2: 
+    3:   <% @results.each do |result| %>
+    4:     <%= result.name %><br>
+    5:   <% end %>
+  
+app/views/courses/search.html.erb:3
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 17:39:17 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2339)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.4ms | Allocations: 6617)
+
+
+Started GET "/search?search=1010" for 127.0.0.1 at 2020-10-06 17:39:19 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"1010"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(name) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  Rendered courses/search.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2023)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.7ms | Allocations: 2492)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: name):
+    1: <h3>Search Results</h3>
+    2: 
+    3:   <% @results.each do |result| %>
+    4:     <%= result.name %><br>
+    5:   <% end %>
+  
+app/views/courses/search.html.erb:3
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 17:47:03 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.6ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 2635)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 36.6ms | ActiveRecord: 1.1ms | Allocations: 7908)
+
+
+Started GET "/search?search=1010" for 127.0.0.1 at 2020-10-06 17:47:06 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"1010"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (1.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(name) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  Rendered courses/search.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2153)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.1ms | Allocations: 2771)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: name):
+    1: <h3>Search Results</h3>
+    2: 
+    3:   <% @results.each do |result| %>
+    4:     <%= result.course %><br>
+    5:   <% end %>
+  
+app/views/courses/search.html.erb:3
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 17:48:02 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.5ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 23.1ms | Allocations: 9626)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 37.2ms | ActiveRecord: 2.9ms | Allocations: 15976)
+
+
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 17:48:03 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2345)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.3ms | Allocations: 6602)
+
+
+Started GET "/search?search=1010" for 127.0.0.1 at 2020-10-06 17:48:05 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"1010"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (1.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(course) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  Rendered courses/search.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2153)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.1ms | Allocations: 2780)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: course):
+    1: <h3>Search Results</h3>
+    2: 
+    3:   <% @results.each do |result| %>
+    4:     <%= result.name %><br>
+    5:   <% end %>
+  
+app/views/courses/search.html.erb:3
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 17:50:31 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.5ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 18.7ms | Allocations: 9370)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 31.1ms | ActiveRecord: 2.3ms | Allocations: 14886)
+
+
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 17:50:32 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2340)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.3ms | Allocations: 6599)
+
+
+Started GET "/search?search=1010" for 127.0.0.1 at 2020-10-06 17:50:35 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"1010"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (1.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(department_id) LIKE '%1010%' OR lower(number) LIKE '%1010%' OR lower(hours) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  Rendered courses/search.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3527)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.2ms | Allocations: 4019)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Course:0x00007fb98928be10>):
+    1: <h3>Search Results</h3>
+    2: 
+    3:   <% @results.each do |result| %>
+    4:     <%= result.name %><br>
+    5:   <% end %>
+  
+app/views/courses/search.html.erb:4
+app/views/courses/search.html.erb:3
+Started GET "/search?search=1010" for 127.0.0.1 at 2020-10-06 18:10:37 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"1010"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(department_id) LIKE '%1010%' OR lower(number) LIKE '%1010%' OR lower(hours) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered courses/search.html.erb within layouts/application (Duration: 277.1ms | Allocations: 153535)
+Completed 500 Internal Server Error in 288ms (ActiveRecord: 1.2ms | Allocations: 156072)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `course' for #<#<Class:0x00007fb985368530>:0x00007fb985362a90>
+Did you mean?  course_url):
+    1: <h3>Search Results of Course Department ID</h3>
+    2: 
+    3:   <% @matchDept.each do |department_id| %>
+    4:     <%= link_to course.department_id, course_path(course.id) %><br>
+    5:   <% end %>
+    6: <hr>
+    7: <h3>Search Results of Course Number</h3>
+  
+app/views/courses/search.html.erb:4
+app/views/courses/search.html.erb:3
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 18:10:39 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.5ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 20.3ms | Allocations: 6065)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 40.0ms | ActiveRecord: 1.0ms | Allocations: 10653)
+
+
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 18:10:40 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2345)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.3ms | Allocations: 6606)
+
+
+Started GET "/search?search=1010" for 127.0.0.1 at 2020-10-06 18:10:44 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"1010"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(department_id) LIKE '%1010%' OR lower(number) LIKE '%1010%' OR lower(hours) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered courses/search.html.erb within layouts/application (Duration: 259.0ms | Allocations: 150313)
+Completed 500 Internal Server Error in 261ms (ActiveRecord: 1.1ms | Allocations: 150890)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `course' for #<#<Class:0x00007fb985368530>:0x00007fb987ef2340>
+Did you mean?  course_url):
+    1: <h3>Search Results of Course Department ID</h3>
+    2: 
+    3:   <% @matchDept.each do |department_id| %>
+    4:     <%= link_to course.department_id, course_path(course.id) %><br>
+    5:   <% end %>
+    6: <hr>
+    7: <h3>Search Results of Course Number</h3>
+  
+app/views/courses/search.html.erb:4
+app/views/courses/search.html.erb:3
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 18:11:58 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 2601)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.8ms | Allocations: 7884)
+
+
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 18:11:59 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2345)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.3ms | Allocations: 6598)
+
+
+Started GET "/search?search=1010" for 127.0.0.1 at 2020-10-06 18:12:02 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"1010"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(department_id) LIKE '%1010%' OR lower(number) LIKE '%1010%' OR lower(hours) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered courses/search.html.erb within layouts/application (Duration: 217.2ms | Allocations: 150535)
+Completed 500 Internal Server Error in 219ms (ActiveRecord: 0.8ms | Allocations: 151254)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `courses' for #<#<Class:0x00007fb9817a8c20>:0x00007fb98921a328>
+Did you mean?  courses_url):
+    1: <h3>Search Results of Course Department ID</h3>
+    2: 
+    3:   <% @matchDept.each do |department_id| %>
+    4:     <%= link_to courses.department_id, course_path(course.id) %><br>
+    5:   <% end %>
+    6: <hr>
+    7: <h3>Search Results of Course Number</h3>
+  
+app/views/courses/search.html.erb:4
+app/views/courses/search.html.erb:3
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 18:17:44 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (1.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.6ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 14.7ms | Allocations: 2635)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 45.0ms | ActiveRecord: 2.5ms | Allocations: 7921)
+
+
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 18:17:46 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2345)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.3ms | Allocations: 6608)
+
+
+Started GET "/search?search=1010" for 127.0.0.1 at 2020-10-06 18:17:50 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"1010"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(department_id) LIKE '%1010%' OR lower(number) LIKE '%1010%' OR lower(hours) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered courses/search.html.erb within layouts/application (Duration: 242.4ms | Allocations: 150545)
+Completed 500 Internal Server Error in 244ms (ActiveRecord: 0.9ms | Allocations: 151270)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `course' for #<#<Class:0x00007fb9878a51e0>:0x00007fb98ba06a30>
+Did you mean?  course_url):
+    1: <h3>Search Results of Course Department ID</h3>
+    2: 
+    3:   <% @matchDept.each do |department_id| %>
+    4:     <%= link_to department_id, course_path(course.id) %><br>
+    5:   <% end %>
+    6: <hr>
+    7: <h3>Search Results of Course Number</h3>
+  
+app/views/courses/search.html.erb:4
+app/views/courses/search.html.erb:3
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 18:18:58 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 2601)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 44.3ms | ActiveRecord: 0.8ms | Allocations: 7892)
+
+
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 18:18:59 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2345)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.3ms | Allocations: 6592)
+
+
+Started GET "/search?search=1010" for 127.0.0.1 at 2020-10-06 18:19:03 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"1010"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(department_id) LIKE '%1010%' OR lower(number) LIKE '%1010%' OR lower(hours) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered courses/search.html.erb within layouts/application (Duration: 210.1ms | Allocations: 150542)
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 0.9ms | Allocations: 151255)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `courses' for #<#<Class:0x00007fb987d33360>:0x00007fb9853f2208>
+Did you mean?  courses_url):
+    1: <h3>Search Results of Course Department ID</h3>
+    2: 
+    3:   <% @matchDept.each do |department_id| %>
+    4:     <%= link_to department_id, course_path(courses.id) %><br>
+    5:   <% end %>
+    6: <hr>
+    7: <h3>Search Results of Course Number</h3>
+  
+app/views/courses/search.html.erb:4
+app/views/courses/search.html.erb:3
+Started GET "/courses" for 127.0.0.1 at 2020-10-06 18:19:25 -0600
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 12.7ms | Allocations: 2601)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.5ms | Allocations: 7880)
+
+
+Started GET "/search?search=1010" for 127.0.0.1 at 2020-10-06 18:19:30 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"1010"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(department_id) LIKE '%1010%' OR lower(number) LIKE '%1010%' OR lower(hours) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:8
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:13
+  Rendered courses/search.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2211)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.4ms | Allocations: 6735)
+
+
+Started GET "/courses/http:%2F%2Flocalhost:3000%2Fcourses" for 127.0.0.1 at 2020-10-06 18:19:32 -0600
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"http://localhost:3000/courses"}
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:79:in `set_course'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.2ms | Allocations: 1223)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Course with 'id'=http://localhost:3000/courses):
+  
+app/controllers/courses_controller.rb:79:in `set_course'
+Started GET "/search?search=1010" for 127.0.0.1 at 2020-10-06 18:19:46 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"1010"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(department_id) LIKE '%1010%' OR lower(number) LIKE '%1010%' OR lower(hours) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:8
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:13
+  Rendered courses/search.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1975)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.4ms | Allocations: 6399)
+
+
+Started GET "/courses/http:%2F%2Flocalhost:3000%2Fcourses" for 127.0.0.1 at 2020-10-06 18:19:49 -0600
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"http://localhost:3000/courses"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:79:in `set_course'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1095)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Course with 'id'=http://localhost:3000/courses):
+  
+app/controllers/courses_controller.rb:79:in `set_course'
+Started GET "/search?search=1010" for 127.0.0.1 at 2020-10-06 18:20:28 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"1010"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(department_id) LIKE '%1010%' OR lower(number) LIKE '%1010%' OR lower(hours) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%') LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered courses/search.html.erb within layouts/application (Duration: 218.6ms | Allocations: 150542)
+Completed 500 Internal Server Error in 222ms (ActiveRecord: 0.8ms | Allocations: 151856)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `course' for #<#<Class:0x00007fb9851e0258>:0x00007fb98b80e840>
+Did you mean?  course_url):
+    1: <h3>Search Results of Course Department ID</h3>
+    2: 
+    3:   <% @matchDept.each do |department_id| %>
+    4:     <%= link_to department_id, course_path(course.find) %><br>
+    5:   <% end %>
+    6: <hr>
+    7: <h3>Search Results of Course Number</h3>
+  
+app/views/courses/search.html.erb:4
+app/views/courses/search.html.erb:3
+Started GET "/search?search=1010" for 127.0.0.1 at 2020-10-06 18:20:46 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"1010"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(department_id) LIKE '%1010%' OR lower(number) LIKE '%1010%' OR lower(hours) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  Rendered courses/search.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1813)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms | Allocations: 3127)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"courses"}, missing required keys: [:id]):
+    1: <h3>Search Results of Course Department ID</h3>
+    2: 
+    3:   <% @matchDept.each do |department_id| %>
+    4:     <%= link_to department_id, course_path() %><br>
+    5:   <% end %>
+    6: <hr>
+    7: <h3>Search Results of Course Number</h3>
+  
+app/views/courses/search.html.erb:4
+app/views/courses/search.html.erb:3
+Started GET "/search?search=1010" for 127.0.0.1 at 2020-10-06 18:20:50 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"1010"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(department_id) LIKE '%1010%' OR lower(number) LIKE '%1010%' OR lower(hours) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  Rendered courses/search.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1578)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 2156)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"courses"}, missing required keys: [:id]):
+    1: <h3>Search Results of Course Department ID</h3>
+    2: 
+    3:   <% @matchDept.each do |department_id| %>
+    4:     <%= link_to department_id, course_path() %><br>
+    5:   <% end %>
+    6: <hr>
+    7: <h3>Search Results of Course Number</h3>
+  
+app/views/courses/search.html.erb:4
+app/views/courses/search.html.erb:3
+Started GET "/search?search=1010" for 127.0.0.1 at 2020-10-06 18:21:29 -0600
+Processing by CoursesController#search as HTML
+  Parameters: {"search"=>"1010"}
+  Rendering courses/search.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(department_id) LIKE '%1010%' OR lower(number) LIKE '%1010%' OR lower(hours) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:3
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(number) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:8
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE (lower(hours) LIKE '%1010%')[0m
+  ↳ app/views/courses/search.html.erb:13
+  Rendered courses/search.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2210)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.7ms | Allocations: 7630)
+
+

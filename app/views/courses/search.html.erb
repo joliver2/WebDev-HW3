@@ -1,0 +1,15 @@
+<h3>Search Results of Course Department ID</h3>
+
+  <% @matchDept.each do |department_id| %>
+    <%= link_to department_id, course_path(courses_url) %><br>
+  <% end %>
+<hr>
+<h3>Search Results of Course Number</h3>
+<% @matchNumber.each do |number| %>
+  <%= link_to number, course_path(courses_url) %><br>
+<% end %>
+<hr>
+<h3>Search Results For Course Hours</h3>
+<% @matchHours.each do |hours| %>
+  <%= link_to hours, course_path(courses_url) %><br>
+<% end %>

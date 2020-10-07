@@ -1,6 +1,5 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
-
   # GET /courses
   # GET /courses.json
   def index
@@ -52,6 +51,14 @@ class CoursesController < ApplicationController
   end
 
   def search
+    if params[:search].blank?
+      redirect_to courses_path and return
+    else
+      @parameter = params[:search].downcase
+      @matchDept = Course.where("lower(department_id) LIKE :search OR lower(number) LIKE :search OR lower(hours) LIKE :search", search: "%#{@parameter}%")
+      @matchHours = Course.where("lower(hours) LIKE ?", "%#{@parameter}%")
+      @matchNumber = Course.where("lower(number) LIKE ?", "%#{@parameter}%")
+    end
 
   end
 
